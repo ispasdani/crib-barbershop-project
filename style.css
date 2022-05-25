@@ -32,9 +32,18 @@ html {
 /*////////////////////teaser video styles////////////////////////*/
 .home-video {
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   background-color: grey;
   position: relative;
+}
+
+.teaser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .welcoming-message {
@@ -84,6 +93,31 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.3s all ease-in-out;
+}
+
+.nav-btn-dropdown {
+  position: relative;
+}
+
+.nav-link-dropdown {
+  background-color: #343935;
+  position: absolute;
+  top: 4vh;
+  left: 0;
+  display: none;
+}
+
+.nav-btn-dropdown:hover .nav-link-dropdown {
+  display: block;
+  z-index: 12;
+}
+
+.nav-link-dropdown p {
+  cursor: pointer;
+}
+
+.scroll-active {
   background-color: #343935;
 }
 
@@ -104,7 +138,7 @@ nav {
 .barbershop-logo {
   width: 120px;
   height: 120px;
-  margin-top: 20px;
+  margin-top: 30px;
   cursor: pointer;
   transition: 0.4s all ease-in-out;
 }
@@ -126,6 +160,7 @@ nav {
   color: #f6e9ca;
   font-family: "Old Standard TT", serif;
   transition: 0.4s all ease-in-out;
+  cursor: pointer;
 }
 
 .nav-buttons p:hover {
@@ -204,6 +239,11 @@ nav {
   margin-top: 30px;
   cursor: pointer;
   transition: 0.4s all ease-in-out;
+}
+
+.services-book-btn a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .services-book-btn:hover {
@@ -358,6 +398,14 @@ nav {
   margin: 50px 0px;
 }
 
+form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .configure {
   width: 100%;
   height: auto;
@@ -970,6 +1018,10 @@ footer {
   .hamburger.active {
     position: fixed;
     right: 0px;
+  }
+
+  .nav-btn-dropdown:hover .nav-link-dropdown {
+    top: 6vh;
   }
 
   .nav-buttons {

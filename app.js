@@ -164,3 +164,11 @@ closeSlideshowBtnAdi.addEventListener("click", function () {
 closeSlideshowBtnStefan.addEventListener("click", function () {
   stefanSlideShow.classList.remove("visible");
 });
+
+// toggle scroll active for navigation bar
+// this will change the color of our navbar when window is scrolled
+window.addEventListener("scroll", function () {
+  const navigationBar = document.getElementById("nav");
+  let windowPosition = window.scrollY > 0;
+  navigationBar.classList.toggle("scroll-active", windowPosition);
+});

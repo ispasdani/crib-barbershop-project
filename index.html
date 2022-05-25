@@ -14,9 +14,8 @@
     <title>Crib Barbershop</title>
   </head>
   <body>
-
     <section class="home" id="1">
-      <nav>
+      <nav id="nav">
         <img
           src="./assets/cribLogo.png"
           alt="barbershop-logo"
@@ -24,9 +23,23 @@
         />
         <div class="nav-buttons" id="nav-buttons">
           <p id="nav-link"><a href="#1">HOME</a></p>
-          <p id="nav-link"><a href="#2">SERVICES</a></p>
-          <p id="nav-link"><a href="#3">ABOUT US</a></p>
           <p id="nav-link"><a href="#4">BOOKING</a></p>
+          <div class="nav-btn-dropdown">
+            <p id="nav-link"><a>ABOUT US</a></p>
+            <div class="nav-link-dropdown">
+              <p><a href="#2">Services</a></p>
+              <p><a href="#3">Meet the eam</a></p>
+              <p><a href="#5">Crib's story</a></p>
+            </div>
+          </div>
+          <div class="nav-btn-dropdown">
+            <p id="nav-link"><a>CONTACT</a></p>
+            <div class="nav-link-dropdown">
+              <p><a href="#6">Opening hours</a></p>
+              <p><a href="#6">Contact</a></p>
+              <p><a href="#6">Adress</a></p>
+            </div>
+          </div>
         </div>
         <div class="hamburger" id="hamburger">
           <span class="bar"></span>
@@ -35,6 +48,9 @@
         </div>
       </nav>
       <div class="home-video">
+        <video autoplay muted loop class="teaser">
+          <source src="./assets/cribTeaser.mp4" type="video/mp4" />
+        </video>
         <h1 class="welcoming-message">WELCOME TO THE CRIB</h1>
       </div>
       <div class="short-description">
@@ -50,12 +66,6 @@
         </div>
       </div>
     </section>
- 
-
-
-
-
-
 
     <section class="services" id="2">
       <img src="./assets/tornPaper.png" alt="" class="paper-background" />
@@ -96,7 +106,7 @@
           <p>150 dkk</p>
         </div>
       </div>
-      <h1 class="services-book-btn"><a>BOOK A TIME</a></h1>
+      <h1 class="services-book-btn"><a href="#4">BOOK A TIME</a></h1>
     </section>
 
     <section class="team-section" id="3">
@@ -221,6 +231,10 @@
       <h1>BOOK AN APPOINTMENT</h1>
       <div class="configure">
         <!-- dropdown for choosing your desired service -->
+        <form
+          action="https://formsubmit.co/fc3d1b5ca8b28c3a2940e6482bf80d80"
+          method="POST"
+        >
         <div class="dropdown">
           <button class="drop-btn" id="service-btn-show">
             <span>&#8595;</span>Choose service
@@ -261,6 +275,33 @@
                 value="Signature cut"
               />
               <label for="haircut">Signature cut</label>
+            </div>
+            <div class="content-options">
+              <input
+                type="checkbox"
+                name="haircut"
+                class="general-input"
+                value="Silen / ASMR haircut"
+              />
+              <label for="haircut">Silen / ASMR haircut</label>
+            </div>
+            <div class="content-options">
+              <input
+                type="checkbox"
+                name="haircut"
+                class="general-input"
+                value="Apprentice haircut"
+              />
+              <label for="haircut">Apprentice haircut</label>
+            </div>
+            <div class="content-options">
+              <input
+                type="checkbox"
+                name="haircut"
+                class="general-input"
+                value="Beard"
+              />
+              <label for="haircut">Beard</label>
             </div>
           </div>
         </div>
@@ -314,6 +355,15 @@
                 id="date-input"
               />
             </div>
+            <div class="content-options">
+              <label for="appt">Select a time: </label>
+              <input
+                type="time"
+                name="appt"
+                class="date-input"
+                id="time-input"
+              />
+            </div>
           </div>
         </div>
         <!-- dropdown for entering your contact information -->
@@ -342,14 +392,27 @@
                 id="number-input"
               />
             </div>
+            <div class="content-options">
+              <label for="email">Enter your email: </label>
+              <input
+                type="email"
+                name="email"
+                class="space-inputs"
+                required
+                id="email-input"
+              />
+            </div>
           </div>
         </div>
       </div>
 
-      <h3 class="confirm-btn" id="confirm-btn">CONFIRM BOOKING</h3>
+      <button type="submit" class="confirm-btn" id="confirm-btn">
+        CONFIRM BOOKING
+      </button>
+    </form>
     </section>
 
-    <section class="crib-story">
+    <section class="crib-story" id="5">
       <h1 class="crib-title">MORE ABOUT THE CRIB</h1>
       <div class="paper-container">
         <img src="./assets/tornPaper.png" class="paper-crib-background" />
@@ -400,9 +463,7 @@
       </div>
     </section>
 
-
-
-    <footer>
+    <footer id="6">
       <div class="location-container">
         <iframe
           class="map"
@@ -424,16 +485,19 @@
         </div>
       </div>
       <div class="some-container">
-        <img
-          src="./assets/instagram.png"
-          alt="instagram-logo"
-          class="some-icon"
-        />
-        <img
-          src="./assets/facebook.png"
-          alt="facebook-logo"
-          class="some-icon"
-        />
+        <a href="https://www.instagram.com/crib_barbershop/">
+          <img
+            src="./assets/instagram.png"
+            alt="instagram-logo"
+            class="some-icon"
+          />
+        </a>
+        <a href="https://www.facebook.com/cribbarbershopaarhus"
+          ><img
+            src="./assets/facebook.png"
+            alt="facebook-logo"
+            class="some-icon"
+        /></a>
       </div>
       <div class="opening-hours">
         <h3>OPENING HOURS</h3>
@@ -442,9 +506,6 @@
         <p>sunday<span>closed</span></p>
       </div>
     </footer>
- 
-
-
 
     <script src="./app.js"></script>
   </body>
