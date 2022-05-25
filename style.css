@@ -103,7 +103,7 @@ nav {
 .nav-link-dropdown {
   background-color: #343935;
   position: absolute;
-  top: 4vh;
+  top: 3vh;
   left: 0;
   display: none;
 }
