@@ -429,6 +429,7 @@ form {
   font-family: "Old Standard TT", serif;
   cursor: pointer;
   transition: 0.4s all ease-in-out;
+  border: none;
 }
 
 .confirm-btn:hover {
