@@ -96,6 +96,10 @@ nav {
   transition: 0.3s all ease-in-out;
 }
 
+.active-section {
+  color: #e2a150;
+}
+
 .nav-btn-dropdown {
   position: relative;
 }
@@ -676,7 +680,7 @@ footer {
 .opening-hours {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   color: #f6e9ca;
   font-family: "Old Standard TT", serif;
@@ -691,8 +695,16 @@ footer {
   margin-top: 5px;
 }
 
-.opening-hours p span {
+.span-1 {
   margin-left: 50px;
+}
+
+.span-2 {
+  margin-left: 105px;
+}
+
+.span-3 {
+  margin-left: 120px;
 }
 
 /*///////////////////////////////////////////////////////////*/
