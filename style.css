@@ -317,10 +317,18 @@ nav {
 }
 
 .rotate-right-img {
+  transition: 0.3s all ease-in-out;
+}
+
+.rotate-right-img:hover {
   transform: rotate(15deg);
 }
 
 .rotate-left-img {
+  transition: 0.3s all ease-in-out;
+}
+
+.rotate-left-img:hover {
   transform: rotate(-15deg);
 }
 
@@ -330,17 +338,20 @@ nav {
   width: 200px;
   height: 40px;
   display: flex;
-  font-size: 25px;
+  font-size: 22px;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 0px 10px;
   transition: 0.4s all ease-in-out;
   cursor: pointer;
+  box-shadow: 5px 5px 0px #824904;
 }
 
 .work-btn:hover {
   transform: scale(1.1);
+  -webkit-animation: jello-horizontal 0.9s both;
+  animation: jello-horizontal 0.9s both;
 }
 
 .presentation {
@@ -431,6 +442,8 @@ form {
   align-items: center;
   margin: 50px 0px;
   font-family: "Old Standard TT", serif;
+  font-size: 20px;
+  font-weight: bold;
   cursor: pointer;
   transition: 0.4s all ease-in-out;
   border: none;
@@ -759,6 +772,16 @@ footer {
 
 /* Hide the images by default */
 .mySlides {
+  width: 60%;
+  height: 80%;
+  object-fit: cover;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.adi-slide-img {
   width: 60%;
   height: 80%;
   object-fit: cover;
@@ -1168,5 +1191,66 @@ footer {
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
 }
