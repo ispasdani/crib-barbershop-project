@@ -672,6 +672,19 @@ footer {
   display: flex;
 }
 
+.adress {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.adress-icon {
+  width: 20px;
+  height: 18px;
+  margin-right: 10px;
+}
+
 .location-container p {
   font-family: "Old Standard TT", serif;
   color: #f6e9ca;
@@ -1141,6 +1154,11 @@ footer {
 
     .close-btn-slideshow {
       color: white;
+    }
+
+    .adress {
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
   }
 
