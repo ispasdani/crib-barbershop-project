@@ -661,6 +661,13 @@ footer {
   align-items: center;
 }
 
+.adress h3 {
+  margin-left: 25px;
+  margin-bottom: 25px;
+  color: #f6e9ca;
+  font-size: 22px;
+}
+
 .location-container {
   display: flex;
 }
@@ -669,7 +676,7 @@ footer {
   font-family: "Old Standard TT", serif;
   color: #f6e9ca;
   font-size: 18px;
-  margin-left: 15px;
+  margin-left: 25px;
 }
 
 .some-container {
@@ -692,12 +699,15 @@ footer {
 
 .opening-hours {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   color: #f6e9ca;
   font-family: "Old Standard TT", serif;
   font-size: 18px;
+  padding-top: 70px;
+  width: 300px;
+  height: 50vh;
 }
 
 .opening-hours h3 {
